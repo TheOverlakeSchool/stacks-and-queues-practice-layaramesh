@@ -33,24 +33,22 @@ public class StacksAndQueuesPractice {
     }
 
     public static void stutter(Queue<Integer> q) {
-//       OK Solution:
-//        Queue<Integer> temp = new LinkedList<>();
-//        while (!q.isEmpty()) {
-//            temp.add(q.remove());
-//        }
-//        while (!temp.isEmpty()) {
-//            int value = temp.remove();
-//            q.add(value);
-//            q.add(value);
-//
-//        }
+        Queue<Integer> queueone = new LinkedList<>();
+        while (!q.isEmpty()) {
+            queueone.add(q.remove());
+        }
+        while (!queueone.isEmpty()) {
+            int val = queueone.remove();
+            q.add(val);
+            q.add(val);
 
-//  Infinite Loop
-//        while (!q.isEmpty()) {
-//            int value = q.remove();
-//            q.add(value);
-//            q.add(value);
-//        }
+        }
+
+        while (!q.isEmpty()) {
+            int valone = q.remove();
+            q.add(valone);
+            q.add(valone);
+        }
 
         int size = q.size();
         for (int i = 0; i < size; i++) {
@@ -78,7 +76,7 @@ public class StacksAndQueuesPractice {
         while (!q.isEmpty()) {
             String value = q.pop();
             temp.add(value);
-            temp2.push(value)
+            temp2.push(value);
         }
 
     }
